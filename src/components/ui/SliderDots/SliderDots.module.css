@@ -1,0 +1,41 @@
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-gray-200);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.dot:hover {
+  background-color: var(--color-gray-500);
+}
+
+.dot:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.active {
+  background-color: var(--color-primary);
+}
+
+.active:hover {
+  background-color: var(--color-primary-dark);
+}
+
+@media (min-width: 768px) {
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}

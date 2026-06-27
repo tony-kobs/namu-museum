@@ -1,0 +1,105 @@
+.button {
+  display: inline-flex;
+  align-items: stretch;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  text-decoration: none;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.button:disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Primary — КВИТКИ */
+.primary {
+  min-height: 54px;
+}
+
+.primaryLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 0 var(--space-6);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-foreground);
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--color-primary);
+  transition: background-color var(--transition-base);
+}
+
+.primaryIconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  min-width: 54px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transition: background-color var(--transition-base);
+}
+
+.primaryIcon {
+  color: var(--color-white);
+}
+
+.primary:hover .primaryLabel {
+  background-color: var(--color-white);
+}
+
+.primary:hover .primaryIconBox {
+  background-color: var(--color-primary-dark);
+}
+
+/* Submit — червона стрілка */
+.submit {
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  min-width: 54px;
+  height: 54px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.submit:hover:not(:disabled) {
+  background-color: var(--color-accent-hover);
+}
+
+.submitIcon {
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .primary {
+    min-height: 60px;
+  }
+
+  .primaryLabel {
+    min-width: 140px;
+    padding: 0 var(--space-8);
+    font-size: var(--font-size-md);
+  }
+
+  .primaryIconBox,
+  .submit {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+  }
+}

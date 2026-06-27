@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-foreground);
+  transition:
+    color var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.link:hover {
+  color: var(--color-primary);
+  opacity: var(--opacity-hover);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

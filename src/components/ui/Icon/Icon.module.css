@@ -1,0 +1,12 @@
+.icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.redSquare {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  flex-shrink: 0;
+}

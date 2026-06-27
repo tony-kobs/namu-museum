@@ -1,0 +1,46 @@
+.logo {
+  display: inline-flex;
+  color: var(--color-foreground);
+  text-decoration: none;
+}
+
+.desktop,
+.mobile {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--second-family);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  text-transform: uppercase;
+}
+
+.letter {
+  font-size: var(--font-size-lg);
+}
+
+.line {
+  font-size: var(--font-size-xl);
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: flex;
+}
+
+@media (min-width: 1280px) {
+  .desktop {
+    display: flex;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .letter {
+    font-size: var(--font-size-xl);
+  }
+}

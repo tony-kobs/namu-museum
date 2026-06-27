@@ -1,0 +1,27 @@
+.section {
+  width: 100%;
+}
+
+.default {
+  padding-block: var(--space-section-xs);
+}
+
+.compact {
+  padding-block: var(--space-12);
+}
+
+.flush {
+  padding-block: 0;
+}
+
+@media (min-width: 768px) {
+  .default {
+    padding-block: var(--space-section-sm);
+  }
+}
+
+@media (min-width: 1280px) {
+  .default {
+    padding-block: var(--space-section-lg);
+  }
+}

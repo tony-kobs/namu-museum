@@ -1,0 +1,14 @@
+.heading {
+  font-family: var(--second-family);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-foreground);
+}
+
+@media (min-width: 1280px) {
+  .heading {
+    font-size: var(--font-size-2xl);
+  }
+}

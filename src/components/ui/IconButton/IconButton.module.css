@@ -1,0 +1,33 @@
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+  color: var(--color-foreground);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:
+    color var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.iconButton:hover {
+  opacity: var(--opacity-hover);
+}
+
+.iconButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.variantMenu,
+.variantClose {
+  color: var(--color-white);
+}
+
+.variantMenu:hover,
+.variantClose:hover {
+  opacity: 1;
+  color: var(--color-gray-100);
+}

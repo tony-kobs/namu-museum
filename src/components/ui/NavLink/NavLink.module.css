@@ -1,0 +1,42 @@
+.navLink {
+  display: inline-block;
+  font-family: var(--second-family);
+  text-decoration: none;
+  transition:
+    color var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.menu {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  color: var(--color-white);
+}
+
+.menu:hover {
+  opacity: var(--opacity-hover);
+}
+
+.footer {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-foreground);
+}
+
+.footer:hover {
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .menu {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (min-width: 1280px) {
+  .menu {
+    font-size: var(--font-size-xl);
+  }
+}
