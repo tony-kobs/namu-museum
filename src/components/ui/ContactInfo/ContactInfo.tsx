@@ -1,4 +1,4 @@
-import { CONTACTS } from "@/constants/contacts";
+import { CONTACTS } from "@/data";
 import styles from "./ContactInfo.module.css";
 
 type ContactInfoProps = {

@@ -1,5 +1,9 @@
-import { SCHEDULE } from "@/constants/schedule";
-import type { ScheduleDay } from "@/types";
+import { SCHEDULE } from "@/data";
+
+type ScheduleDay = {
+  time: string;
+  day: string;
+};
 import styles from "./ScheduleList.module.css";
 
 type ScheduleListVariant = "menu" | "footer";

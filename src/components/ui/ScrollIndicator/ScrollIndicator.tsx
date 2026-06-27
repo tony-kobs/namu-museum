@@ -1,4 +1,4 @@
-import { HERO } from "@/constants/site";
+import { HERO } from "@/data";
 import styles from "./ScrollIndicator.module.css";
 
 type ScrollIndicatorProps = {

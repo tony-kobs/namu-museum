@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { fontVariables } from "@/lib/fonts";
-import { SITE } from "@/constants/site";
+import { SITE } from "@/data";
 import "./globals.css";
 
 export const metadata: Metadata = {

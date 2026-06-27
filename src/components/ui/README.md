@@ -1,27 +1,22 @@
-# UI Components (UI Kit)
+# UI — спільні компоненти
 
-Атомарні, перевикористовувані компоненти без бізнес-логіки.
+Маленькі блоки, які використовуються в різних секціях.
 
-| Компонент          | Статус | Опис                                                       |
-| ------------------ | ------ | ---------------------------------------------------------- |
-| `Button/`          | ✅     | primary (КВИТКИ), submit (червона стрілка)                 |
-| `Input/`           | ✅     | Email input для підписки                                   |
-| `Logo/`            | ✅     | NAMU logo (desktop + mobile варіанти)                      |
-| `Icon/`            | ✅     | SVG: burger, close, arrow, facebook, instagram, red-square |
-| `IconButton/`      | ✅     | Кнопка-іконка (burger, close)                              |
-| `SectionHeading/`  | ✅     | Заголовок секції                                           |
-| `NavLink/`         | ✅     | Посилання навігації (menu / footer)                        |
-| `Divider/`         | ✅     | Horizontal / vertical лінія                                |
-| `SliderDots/`      | ✅     | Pagination dots для gallery slider                         |
-| `ScrollIndicator/` | ✅     | Desktop scroll indicator                                   |
-| `ScheduleList/`    | ✅     | Графік роботи (menu / footer)                              |
-| `ContactInfo/`     | ✅     | Блок контактів                                             |
-| `SocialLinks/`     | ✅     | Facebook + Instagram                                       |
-
-**Preview:** `/ui-kit`
+| Компонент        | Для чого                           |
+| ---------------- | ---------------------------------- |
+| `Button`         | Кнопка «КВИТКИ» та червона стрілка |
+| `Input`          | Поле email                         |
+| `Logo`           | Логотип NAMU                       |
+| `Icon`           | SVG-іконки                         |
+| `IconButton`     | Burger / close                     |
+| `SectionHeading` | Заголовок секції                   |
+| `NavLink`        | Посилання в меню та footer         |
+| `ScheduleList`   | Графік роботи                      |
+| `ContactInfo`    | Контакти                           |
+| `SocialLinks`    | Facebook, Instagram                |
 
 **Import:**
 
 ```tsx
-import { Button, Logo, SectionHeading } from "@/components/ui";
+import { Button, Logo } from "@/components/ui";
 ```

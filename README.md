@@ -1,56 +1,79 @@
 # NAMU Museum
 
-Landing page for the National Art Museum of Ukraine (NAMU).
+Навчальний landing page — National Art Museum of Ukraine.
 
-**Stack:** Next.js 16 · TypeScript · App Router · CSS Modules
+**Стек:** Next.js · TypeScript · App Router · CSS Modules
 
-## Quick Start
+## Запуск
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+Відкрий [http://localhost:3000](http://localhost:3000)
 
-## Scripts
-
-| Command                | Description        |
-| ---------------------- | ------------------ |
-| `npm run dev`          | Development server |
-| `npm run build`        | Production build   |
-| `npm run lint`         | ESLint check       |
-| `npm run lint:fix`     | ESLint auto-fix    |
-| `npm run format`       | Prettier format    |
-| `npm run format:check` | Prettier check     |
-| `npm run typecheck`    | TypeScript check   |
-
-## Project Structure
+## Структура проєкту
 
 ```
 src/
-├── app/           → Next.js routes & layout
+├── app/
+│   ├── layout.tsx      ← шрифти, metadata
+│   ├── page.tsx        ← збірка сторінки
+│   └── globals.css     ← базові стилі + CSS-змінні
 ├── components/
-│   ├── layout/    → Header, Footer, NavMenu
-│   ├── sections/  → Hero, Events, Gallery, Subscription
-│   ├── ui/        → UI Kit (Button, Input, Logo…)
-│   └── features/  → EventCard, GallerySlider, Modal…
-├── constants/     → Mock data & site config
-├── hooks/         → Client-side hooks
-├── styles/        → Design tokens (CSS)
-└── types/         → TypeScript types
+│   ├── Header/         ← шапка + меню
+│   ├── Footer/         ← підвал
+│   ├── Hero/           ← перший екран
+│   ├── Events/         ← актуальні події
+│   ├── Gallery/        ← галерея
+│   ├── Subscribe/      ← підписка
+│   ├── Container/      ← обгортка по ширині макету
+│   └── ui/             ← кнопки, іконки, лого (спільні)
+├── data/
+│   └── index.ts        ← тексти, посилання, mock-дані
+└── styles/
+    └── variables.css   ← кольори, відступи, шрифти
 ```
 
-## Documentation
+## Як зібрана сторінка
 
-- [Architecture Guide](./docs/ARCHITECTURE.md) — full project architecture
-- [Pre-dev Checklist](./docs/CHECKLIST.md) — setup status
-- [Contributing Guide](./CONTRIBUTING.md) — git flow & PR rules
+`page.tsx` — просто список секцій зверху вниз:
 
-## Design
+```tsx
+<Header />
+<main>
+  <Hero />
+  <Events />
+  <Gallery />
+  <Subscribe />
+</main>
+<Footer />
+```
 
-Mockups: `../namu-figma/`
+## Розподіл задач у команді
 
-## Team
+| Хто   | Папка                                                                 |
+| ----- | --------------------------------------------------------------------- |
+| Dev 1 | `components/ui/` (вже готово)                                         |
+| Dev 2 | `components/Header/` — Logo, IconButton, меню (`@/components/ui`)     |
+| Dev 3 | `components/Hero/`                                                    |
+| Dev 4 | `components/Events/`                                                  |
+| Dev 5 | `components/Gallery/`                                                 |
+| Dev 6 | `components/Footer/` + `Subscribe/` — з `@/components/ui` та `@/data` |
 
-See [Architecture §8](./docs/ARCHITECTURE.md#8-розподіл-задач) for task distribution.
+Кожен працює у **своїй папці** — менше конфліктів у Git.
+
+## Git
+
+- Гілка `develop` — основна для роботи
+- `feature/hero`, `feature/events` — окремі задачі
+- PR в `develop`, перед merge: `npm run lint && npm run build`
+
+## Макет
+
+Файли макету: `../namu-figma/`
+
+## Задачі для команди
+
+Детальні підказки кожному розробнику: [docs/DEV-TASKS.md](./docs/DEV-TASKS.md)

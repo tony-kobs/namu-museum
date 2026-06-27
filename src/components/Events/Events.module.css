@@ -1,0 +1,15 @@
+.events {
+  padding-block: var(--space-section-xs);
+}
+
+@media (min-width: 768px) {
+  .events {
+    padding-block: var(--space-section-sm);
+  }
+}
+
+@media (min-width: 1280px) {
+  .events {
+    padding-block: var(--space-section-lg);
+  }
+}

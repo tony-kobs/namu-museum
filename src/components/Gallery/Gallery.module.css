@@ -1,0 +1,15 @@
+.gallery {
+  padding-block: var(--space-section-xs);
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    padding-block: var(--space-section-sm);
+  }
+}
+
+@media (min-width: 1280px) {
+  .gallery {
+    padding-block: var(--space-section-lg);
+  }
+}

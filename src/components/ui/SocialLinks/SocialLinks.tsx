@@ -1,10 +1,9 @@
-import { SOCIAL_LINKS } from "@/constants/social";
+import { SOCIAL_LINKS } from "@/data";
 import { Icon } from "@/components/ui/Icon";
-import type { SocialLink } from "@/types";
 import styles from "./SocialLinks.module.css";
 
 type SocialLinksProps = {
-  links?: readonly SocialLink[];
+  links?: typeof SOCIAL_LINKS;
   className?: string;
 };
 

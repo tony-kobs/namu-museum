@@ -1,33 +1,52 @@
-## Summary
+## Опис
 
-<!-- What does this PR do? -->
+<!-- Коротко: що зроблено? Наприклад: «Зверстав секцію Hero за макетом Museum_1280.png» -->
 
-## Type
+## Хто і що
 
-- [ ] feat
-- [ ] fix
-- [ ] refactor
-- [ ] style
-- [ ] docs
+<!-- Обери свою роль і вкажи папку -->
 
-## Scope
+- [ ] Dev 2 — `components/Header/`
+- [ ] Dev 3 — `components/Hero/`
+- [ ] Dev 4 — `components/Events/`
+- [ ] Dev 5 — `components/Gallery/`
+- [ ] Dev 6 — `components/Footer/` + `components/Subscribe/`
+- [ ] Інше: <!-- вкажи -->
 
-<!-- Which section/component? e.g. Hero, UI Kit / Button -->
+**Гілка:** `feature/<!-- назва -->`  
+**Base branch:** `develop`
 
-## Screenshots
+## Тип змін
 
-<!-- Desktop (1280px) + Mobile (320px) -->
+- [ ] feat — нова секція / компонент
+- [ ] fix — виправлення бага
+- [ ] style — тільки стилі
+- [ ] refactor — рефакторинг без зміни вигляду
+- [ ] docs — документація
 
-| Desktop | Mobile |
-| ------- | ------ |
-|         |        |
+## Що перевірив(ла) сам(а)
 
-## Checklist
+- [ ] Порівняв(ла) з макетом `namu-figma/` (320 / 768 / 1280 px)
+- [ ] Використав(ла) UI Kit з `@/components/ui` (де потрібно)
+- [ ] Дані з `@/data`, тексти не захардкоджені
+- [ ] Стилі через CSS Modules + `var(--...)` з `variables.css`
+- [ ] Картинки через `next/image`
+- [ ] Працював(ла) тільки у своїй папці
+- [ ] `npm run lint` ✅
+- [ ] `npm run build` ✅
 
-- [ ] Works on 320px, 768px, 1280px
-- [ ] Uses design tokens from `variables.css`
-- [ ] Data from `constants/`, no hardcode
-- [ ] `npm run lint` passes
-- [ ] `npm run typecheck` passes
-- [ ] `npm run build` passes
-- [ ] No changes outside assigned scope
+## Скріншоти
+
+<!-- Обовʼязково: desktop (1280px) + mobile (320px) -->
+
+| Desktop (1280px) | Mobile (320px) |
+| ---------------- | -------------- |
+|                  |                |
+
+## Примітки для ревʼюера
+
+<!-- Опційно: що залишилось на потім, питання, складні місця -->
+
+---
+
+📋 Детальні задачі: [docs/DEV-TASKS.md](../docs/DEV-TASKS.md)

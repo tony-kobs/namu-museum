@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE } from "@/constants/site";
+import { SITE } from "@/data";
 import styles from "./Logo.module.css";
 
 type LogoProps = {
