@@ -74,6 +74,13 @@ src/
 
 Файли макету: `../namu-figma/`
 
+## База данних mockapi
+
+const BASE_URL = "https://6a450e04aab3faec3f6952a2.mockapi.io/namu/:endpoint";
+
+const events = await fetch(`${BASE_URL}/events`);
+const gallery = await fetch(`${BASE_URL}/gallery`);
+
 ## Задачі для команди
 
 Детальні підказки кожному розробнику: [docs/DEV-TASKS.md](./docs/DEV-TASKS.md)
