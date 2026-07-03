@@ -1,4 +1,136 @@
 .hero {
-  min-height: 100vh;
-  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content {
+  max-width: 600px;
+  padding: 0 24px;
+  align-self: center;
+}
+.imageWrapper {
+  height: 60vh;
+  min-width: 320px;
+  background-image: url("/images/hero/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 100%;
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+}
+.button {
+  display: flex;
+  align-items: stretch;
+  margin: 0 auto;
+  max-width: 280px;
+  border: 1px solid #1a5a4c;
+}
+.buttonText {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-transform: uppercase;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0f0e08;
+}
+.buttonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  background: #1a5a4c;
+  color: #d7dde3;
+}
+.verticalLabel {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .content {
+    flex: 0 0 50%;
+    padding: 120px 0 0 32px;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .title {
+    text-align: left;
+    margin-bottom: 38px;
+    font-size: 54px;
+    line-height: 120%;
+  }
+  .imageWrapper {
+    flex: 1;
+    height: 384px;
+    min-width: 374px;
+    order: 2;
+  }
+  .button {
+    margin: 0;
+    width: fit-content;
+  }
+  .buttonText {
+    padding: 26px 67px;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    padding-left: 55px;
+    position: relative;
+    padding-right: 0;
+    gap: 30px;
+    align-items: center;
+  }
+  .content {
+    padding: 0;
+    flex: 0 0 470px;
+    align-self: center;
+  }
+  .title {
+    font-size: 72px;
+    margin-bottom: 89px;
+  }
+  .button {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .imageWrapper {
+    flex: 1;
+    height: 655px;
+  }
+  .verticalLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: 55px;
+    bottom: 40px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    color: #0f0e08;
+  }
+  .verticalLabel::before {
+    content: "";
+    width: 1px;
+    height: 70px;
+    background: #0f0e08;
+  }
 }
