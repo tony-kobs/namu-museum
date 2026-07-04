@@ -2,14 +2,39 @@
   padding-block: var(--space-section-xs);
 }
 
+.heading {
+  margin-bottom: var(--space-10);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-section-xs);
+  margin-bottom: var(--space-section-xs);
+}
+
 @media (min-width: 768px) {
   .events {
     padding-block: var(--space-section-sm);
+  }
+
+  .heading {
+    margin-bottom: var(--space-12);
+  }
+
+  .list {
+    gap: var(--space-section-sm);
+    margin-bottom: var(--space-section-sm);
   }
 }
 
 @media (min-width: 1280px) {
   .events {
     padding-block: var(--space-section-lg);
+  }
+
+  .list {
+    gap: var(--space-16);
+    margin-bottom: var(--space-16);
   }
 }

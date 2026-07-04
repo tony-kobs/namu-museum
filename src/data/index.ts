@@ -8,6 +8,7 @@ export type Event = {
   description: string;
   image: {
     src: string;
+    src2x?: string;
     alt: string;
     width: number;
     height: number;
@@ -17,6 +18,7 @@ export type Event = {
 export type GalleryItem = {
   id: string;
   src: string;
+  src2x?: string;
   alt: string;
   width: number;
   height: number;
@@ -86,81 +88,4 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-// Події та галерея
-export const EVENTS: Event[] = [
-  {
-    id: "event-1",
-    variant: "default",
-    category: "ВИСТАВКА",
-    date: "26.08–01.12.2019",
-    title: "Йду і повертаюсь",
-    description:
-      "Досліджуйте взаємозвʼязок людини та природи через живопис, графіку та скульптуру.",
-    image: {
-      src: "/images/events/event-1.jpg",
-      alt: "Картина «Йду і повертаюсь»",
-      width: 640,
-      height: 420,
-    },
-  },
-  {
-    id: "event-2",
-    variant: "default",
-    category: "ВИСТАВКА",
-    date: "26.08–01.12.2019",
-    title: "Timeless",
-    description:
-      "Виставка, що поєднує класичне та сучасне мистецтво в одному просторі.",
-    image: {
-      src: "/images/events/event-2.jpg",
-      alt: "Картина «Timeless»",
-      width: 640,
-      height: 420,
-    },
-  },
-  {
-    id: "event-3",
-    variant: "featured",
-    category: "ЛЕКЦІЯ",
-    date: "15/02/2021, 13:00",
-    title: "Від класицизму до романтизму",
-    description: "",
-    image: {
-      src: "/images/events/event-3.jpg",
-      alt: "Лекція «Від класицизму до романтизму»",
-      width: 1280,
-      height: 646,
-    },
-  },
-];
-
-export const GALLERY_ITEMS: GalleryItem[] = [
-  {
-    id: "gallery-1",
-    src: "/images/gallery/gallery-1.jpg",
-    alt: "Портрет у галереї",
-    width: 400,
-    height: 600,
-  },
-  {
-    id: "gallery-2",
-    src: "/images/gallery/gallery-2.jpg",
-    alt: "Пейзаж у галереї",
-    width: 640,
-    height: 420,
-  },
-  {
-    id: "gallery-3",
-    src: "/images/gallery/gallery-3.jpg",
-    alt: "Натюрморт у галереї",
-    width: 640,
-    height: 360,
-  },
-  {
-    id: "gallery-4",
-    src: "/images/gallery/gallery-4.jpg",
-    alt: "Картина у галереї",
-    width: 320,
-    height: 320,
-  },
-];
+// Події та галерея — дані з mockAPI (див. src/services/)
