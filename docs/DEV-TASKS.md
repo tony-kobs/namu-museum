@@ -117,8 +117,8 @@ import { NAV_LINKS } from "@/data";
 Секція вже має `id="events"` і заголовок — доповнити картками.
 
 ```tsx
-import { EVENTS } from "@/data";
-// 3 події: 2 × variant "default", 1 × variant "featured"
+import { fetchEvents } from "@/services/eventServices";
+// дані приходять з mockAPI, не з @/data
 ```
 
 ### Два типи карток
@@ -154,8 +154,8 @@ import { EVENTS } from "@/data";
 ### Що зробити
 
 ```tsx
-import { GALLERY_ITEMS } from "@/data";
-// 4 зображення
+import { fetchGallery } from "@/services/galleryServices";
+// 4 зображення з mockAPI
 ```
 
 ### Адаптив
