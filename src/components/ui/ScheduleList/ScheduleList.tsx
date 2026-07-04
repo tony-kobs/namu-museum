@@ -33,22 +33,45 @@ export function ScheduleList({
     .filter(Boolean)
     .join(" ");
 
-  return (
-    <div className={classNames}>
-      <h3 className={styles.title}>{title}</h3>
-      <ul className={styles.list}>
-        {days.map((item) => (
-          <li key={`${item.time}-${item.day}`} className={styles.item}>
-            <span className={styles.time}>{item.time}</span>
-            <span className={styles.day}>{item.day}</span>
-          </li>
-        ))}
-      </ul>
+  const list = (
+    <ul className={styles.list}>
+      {days.map((item) => (
+        <li key={`${item.time}-${item.day}`} className={styles.item}>
+          <span className={styles.time}>{item.time}</span>
+          <span className={styles.day}>{item.day}</span>
+        </li>
+      ))}
+    </ul>
+  );
+
+  const aside = (
+    <div className={styles.menuAside}>
       <p className={styles.daysOff}>
         <span className={styles.daysOffLabel}>{daysOff.label}</span>{" "}
         {daysOff.value}
       </p>
       <p className={styles.note}>{note}</p>
+    </div>
+  );
+
+  return (
+    <div className={classNames}>
+      <h3 className={styles.title}>{title}</h3>
+      {variant === "menu" ? (
+        <div className={styles.menuBody}>
+          {list}
+          {aside}
+        </div>
+      ) : (
+        <>
+          {list}
+          <p className={styles.daysOff}>
+            <span className={styles.daysOffLabel}>{daysOff.label}</span>{" "}
+            {daysOff.value}
+          </p>
+          <p className={styles.note}>{note}</p>
+        </>
+      )}
     </div>
   );
 }

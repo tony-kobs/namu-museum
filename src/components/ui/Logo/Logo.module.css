@@ -44,3 +44,17 @@
     font-size: var(--font-size-xl);
   }
 }
+
+.stacked .desktop {
+  display: none;
+}
+
+.stacked .mobile {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .stacked .line {
+    font-size: var(--font-size-xl);
+  }
+}
