@@ -30,7 +30,7 @@ export function Header() {
           className={styles.menuButton}
           onClick={() => setIsMenuOpen(true)}
         />
-        <Logo className={styles.logo} />
+        <Logo className={styles.logo} variant="stacked" />
       </Container>
 
       {isMenuOpen && (
@@ -53,7 +53,7 @@ export function Header() {
                 icon="close"
                 variant="close"
                 ariaLabel="Close menu"
-                className={styles.closeButton}
+                className={`${styles.menuButton} ${styles.closeButton}`}
                 onClick={closeMenu}
               />
 

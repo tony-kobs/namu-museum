@@ -31,12 +31,12 @@
 
 @media (min-width: 768px) {
   .menu {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-base);
   }
 }
 
 @media (min-width: 1280px) {
   .menu {
-    font-size: var(--font-size-xl);
+    font-size: 1.375rem;
   }
 }

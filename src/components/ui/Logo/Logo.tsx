@@ -5,10 +5,21 @@ import styles from "./Logo.module.css";
 type LogoProps = {
   href?: string;
   className?: string;
+  variant?: "default" | "stacked";
 };
 
-export function Logo({ href = "/", className }: LogoProps) {
-  const classNames = [styles.logo, className].filter(Boolean).join(" ");
+export function Logo({
+  href = "/",
+  className,
+  variant = "default",
+}: LogoProps) {
+  const classNames = [
+    styles.logo,
+    variant === "stacked" && styles.stacked,
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   const content = (
     <>
