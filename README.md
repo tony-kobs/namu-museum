@@ -31,7 +31,10 @@ src/
 │   ├── Container/      ← обгортка по ширині макету
 │   └── ui/             ← кнопки, іконки, лого (спільні)
 ├── data/
-│   └── index.ts        ← тексти, посилання, mock-дані
+│   └── index.ts        ← типи, тексти сайту, nav, контакти (НЕ події/галерея)
+└── services/
+    ├── eventServices.ts   ← mockAPI /events
+    └── galleryServices.ts ← mockAPI /gallery
 └── styles/
     └── variables.css   ← кольори, відступи, шрифти
 ```
